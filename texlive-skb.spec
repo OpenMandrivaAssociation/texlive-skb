@@ -211,6 +211,7 @@ from someone who just wants to write articles and books.
 #- source
 %doc %{_texmfdistdir}/source/latex/skb/skb.dtx
 %doc %{_texmfdistdir}/source/latex/skb/skb.ins
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -221,3 +222,5 @@ from someone who just wants to write articles and books.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}

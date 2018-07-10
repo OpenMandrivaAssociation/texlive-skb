@@ -6,7 +6,7 @@
 # catalog-version 0.51
 Name:		texlive-skb
 Version:	0.52
-Release:	1
+Release:	2
 Summary:	Tools for a repository of long-living documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/skb

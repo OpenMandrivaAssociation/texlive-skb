@@ -1,19 +1,13 @@
-# revision 22781
-# category Package
-# catalog-ctan /macros/latex/contrib/skb
-# catalog-date 2011-05-13 02:11:01 +0200
-# catalog-license lppl1.3
-# catalog-version 0.51
 Name:		texlive-skb
-Version:	0.52
-Release:	3
+Version:	22781
+Release:	1
 Summary:	Tools for a repository of long-living documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/skb
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -34,12 +28,12 @@ using the document classes provided, it hides a lot of LaTeX
 from someone who just wants to write articles and books.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -204,24 +198,11 @@ from someone who just wants to write articles and books.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 0.51-2
-+ Revision: 756064
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 0.51-1
-+ Revision: 719546
-- texlive-skb
-- texlive-skb
-- texlive-skb
-- texlive-skb
-

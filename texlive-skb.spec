@@ -1,6 +1,6 @@
 Name:		texlive-skb
 Version:	22781
-Release:	1
+Release:	2
 Summary:	Tools for a repository of long-living documents
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/skb

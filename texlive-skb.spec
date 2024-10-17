@@ -3,7 +3,7 @@ Version:	22781
 Release:	2
 Summary:	Tools for a repository of long-living documents
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/skb
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/skb
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/skb.doc.r%{version}.tar.xz
